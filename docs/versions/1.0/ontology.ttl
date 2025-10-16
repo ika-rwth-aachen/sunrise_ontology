@@ -1,0 +1,4036 @@
+@prefix : <https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#> .
+
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology> rdf:type owl:Ontology ;
+                                                               owl:versionIRI <https://ika-rwth-aachen.github.io/sunrise_ontology/ontology/1.0> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasAirPressure
+:hasAirPressure rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasQuantity ;
+                rdfs:domain :Weather ;
+                rdfs:range :Air_pressure .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasCloudiness
+:hasCloudiness rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasQuantity ;
+               rdfs:domain :Natural_illumination ;
+               rdfs:range :Cloudiness .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasCommunicationTechnology
+:hasCommunicationTechnology rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasType ;
+                            rdfs:domain :Communication ;
+                            rdfs:range :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasCommunicationType
+:hasCommunicationType rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasType ;
+                      rdfs:domain :Communication ;
+                      rdfs:range :Communication_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDirectionOfTravel
+:hasDirectionOfTravel rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasType ;
+                      rdfs:domain :Drivable_area_lane_specification ;
+                      rdfs:range :Direction_of_travel .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDownlink
+:hasDownlink rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasType ;
+             rdfs:domain :Communication ;
+             rdfs:range :Downlink .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaEdge
+:hasDrivableAreaEdge rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasType ;
+                     rdfs:domain :Drivable_area ;
+                     rdfs:range :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaGeometry
+:hasDrivableAreaGeometry rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasType ;
+                         rdfs:domain :Drivable_area ;
+                         rdfs:range :Drivable_area_geometry .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaLaneSpecification
+:hasDrivableAreaLaneSpecification rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :hasType ;
+                                  rdfs:domain :Drivable_area ;
+                                  rdfs:range :Drivable_area_lane_specification .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaSigns
+:hasDrivableAreaSigns rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasType ;
+                      rdfs:domain :Drivable_area ;
+                      rdfs:range :Drivable_area_signs .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaSurface
+:hasDrivableAreaSurface rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasType ;
+                        rdfs:domain :Drivable_area ;
+                        rdfs:range :Drivable_area_surface .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaSurfaceFeature
+:hasDrivableAreaSurfaceFeature rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasType ;
+                               rdfs:domain :Drivable_area_surface ;
+                               rdfs:range :Drivable_area_surface_features .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaSurfaceType
+:hasDrivableAreaSurfaceType rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasType ;
+                            rdfs:domain :Drivable_area_surface ;
+                            rdfs:range :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableAreaType
+:hasDrivableAreaType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasType ;
+                     rdfs:domain :Drivable_area ;
+                     rdfs:range :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasDrivableInducedSurfaceCondition
+:hasDrivableInducedSurfaceCondition rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :hasType ;
+                                    rdfs:domain :Drivable_area_surface ;
+                                    rdfs:range :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasExposureMetric
+:hasExposureMetric rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :Dynamic_entity ,
+                               :Environmental_condition ,
+                               :Scenery_elements ;
+                   rdfs:range :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasGradient
+:hasGradient rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasQuantity ;
+             rdfs:domain :Longitudinal_plane ;
+             rdfs:range :Gradient .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasHeight
+:hasHeight rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasQuantity ;
+           rdfs:domain :Special_structures_dimension ;
+           rdfs:range :Height .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasHumidity
+:hasHumidity rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasQuantity ;
+             rdfs:domain :Weather ;
+             rdfs:range :Humidity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasIlluminationIntensity
+:hasIlluminationIntensity rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasQuantity ;
+                          rdfs:domain :Natural_illumination ;
+                          rdfs:range :Illumination_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasIntersectionType
+:hasIntersectionType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasType ;
+                     rdfs:domain :Intersection ;
+                     rdfs:range :Intersection_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLaneDimensions
+:hasLaneDimensions rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasType ;
+                   rdfs:domain :Drivable_area_lane_specification ;
+                   rdfs:range :Lane_dimensions .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLaneMarking
+:hasLaneMarking rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasType ;
+                rdfs:domain :Drivable_area_lane_specification ;
+                rdfs:range :Lane_marking .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLaneType
+:hasLaneType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasType ;
+             rdfs:domain :Drivable_area_lane_specification ;
+             rdfs:range :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLaneUsage
+:hasLaneUsage rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasType ;
+              rdfs:domain :Drivable_area_lane_specification ;
+              rdfs:range :Lane_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLatency
+:hasLatency rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasQuantity ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Downlink
+                                        :Uplink
+                                      )
+                        ] ;
+            rdfs:range :Latency .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasLenght
+:hasLenght rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasQuantity ;
+           rdfs:domain :Special_structures_dimension ;
+           rdfs:range :Length .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasParticulatesIntensity
+:hasParticulatesIntensity rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasQuantity ;
+                          rdfs:domain :Particulates ;
+                          rdfs:range :Particulates_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasParticulatesSize
+:hasParticulatesSize rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasQuantity ;
+                     rdfs:domain :Particulates ;
+                     rdfs:range :Particulates_size .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasParticulatesType
+:hasParticulatesType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasType ;
+                     rdfs:domain :Particulates ;
+                     rdfs:range :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasQuantity
+:hasQuantity rdf:type owl:ObjectProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasRTKCorrectionType
+:hasRTKCorrectionType rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasType ;
+                      rdfs:domain :RTK_correction ;
+                      rdfs:range :RTK_correction_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasRadius
+:hasRadius rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasQuantity ;
+           rdfs:domain :Curves ;
+           rdfs:range :Radius .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasRainfallIntensity
+:hasRainfallIntensity rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasQuantity ;
+                      rdfs:domain :Rainfall ;
+                      rdfs:range :Rainfall_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasRainfallType
+:hasRainfallType rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasType ;
+                 rdfs:domain :Rainfall ;
+                 rdfs:range :Rainfall_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasRoundaboutType
+:hasRoundaboutType rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasType ;
+                   rdfs:domain :Roundabout ;
+                   rdfs:range :Roundabout_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasShoulderWidth
+:hasShoulderWidth rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasQuantity ;
+                  rdfs:domain :Special_structures_dimension ;
+                  rdfs:range :Shoulder_width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSignFeature
+:hasSignFeature rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasType ;
+                rdfs:domain :Drivable_area_signs ;
+                rdfs:range :Sign_feature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSignType
+:hasSignType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasType ;
+             rdfs:domain :Drivable_area_signs ;
+             rdfs:range :Sign_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSignalInterference
+:hasSignalInterference rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasQuantity ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Communication
+                                                   :Positioning
+                                                 )
+                                   ] ;
+                       rdfs:range :Signal_interference .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSignalStrength
+:hasSignalStrength rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasQuantity ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Communication
+                                               :Positioning
+                                             )
+                               ] ;
+                   rdfs:range :Signal_strength .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSnowfallVisibility
+:hasSnowfallVisibility rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasQuantity ;
+                       rdfs:domain :Snowfall ;
+                       rdfs:range :Snowfall_visibility .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSpeedLimit
+:hasSpeedLimit rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasQuantity ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Drivable_area_lane_specification
+                                           :Drivable_area_type
+                                         )
+                           ] ;
+               rdfs:range :Speed_limit .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSunPosition
+:hasSunPosition rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasQuantity ;
+                rdfs:domain :Natural_illumination ;
+                rdfs:range :Sun_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSuperelevation
+:hasSuperelevation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasQuantity ;
+                   rdfs:domain :Transverse_plane ;
+                   rdfs:range :Superelevation .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasSurfaceTemperature
+:hasSurfaceTemperature rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasQuantity ;
+                       rdfs:domain :Weather ;
+                       rdfs:range :Surface_temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasTemperature
+:hasTemperature rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasQuantity ;
+                rdfs:domain :Weather ;
+                rdfs:range :Temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasThroughput
+:hasThroughput rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasQuantity ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Downlink
+                                           :Uplink
+                                         )
+                           ] ;
+               rdfs:range :Throughput .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasTransversePlaneType
+:hasTransversePlaneType rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasType ;
+                        rdfs:domain :Transverse_plane ;
+                        rdfs:range :Transverse_plane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasType
+:hasType rdf:type owl:ObjectProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasUplink
+:hasUplink rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasType ;
+           rdfs:domain :Communication ;
+           rdfs:range :Uplink .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasWidth
+:hasWidth rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasQuantity ;
+          rdfs:domain :Special_structures_dimension ;
+          rdfs:range :Width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasWindDirection
+:hasWindDirection rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasType ;
+                  rdfs:domain :Wind ;
+                  rdfs:range :Wind_direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#hasWindSpeed
+:hasWindSpeed rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasQuantity ;
+              rdfs:domain :Wind ;
+              rdfs:range :Wind_speed .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Acceleration
+:Acceleration rdf:type owl:DatatypeProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Active_traffic_management
+:Active_traffic_management rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :Drivable_area_type ;
+                           rdfs:range xsd:boolean .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cloudiness
+:Cloudiness rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gradient
+:Gradient rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Height
+:Height rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Illumination_intensity
+:Illumination_intensity rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Intensity
+:Intensity rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Latency
+:Latency rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Length
+:Length rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_intensity
+:Particulates_intensity rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_size
+:Particulates_size rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Radius
+:Radius rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shoulder_width
+:Shoulder_width rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowfall_visibility
+:Snowfall_visibility rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Speed
+:Speed rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Speed_limit
+:Speed_limit rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sun_position
+:Sun_position rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Superelevation
+:Superelevation rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temperature
+:Temperature rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Throughput
+:Throughput rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Width
+:Width rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#accelerationValue
+:accelerationValue rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :Acceleration .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#cloudinessValue
+:cloudinessValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Cloudiness ;
+                 rdfs:domain :Cloudiness_scalar ;
+                 rdfs:range xsd:unsignedShort .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#gradientValue
+:gradientValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :Gradient ;
+               rdfs:domain :Gradient_scalar ;
+               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#heightValue
+:heightValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Height ;
+             rdfs:domain :Height_scalar ;
+             rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#illuminationIntensityValue
+:illuminationIntensityValue rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :Illumination_intensity ;
+                            rdfs:domain :Illumination_intensity_scalar ;
+                            rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#intensityValue
+:intensityValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Intensity ;
+                rdfs:domain :Rainfall_intensity_scalar ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#latencyValue
+:latencyValue rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :Latency ;
+              rdfs:domain :Latency_scalar ;
+              rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#lengthValue
+:lengthValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Length ;
+             rdfs:domain :Length_scalar ;
+             rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxAccelerationValue
+:maxAccelerationValue rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :Acceleration .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxCloudinessValue
+:maxCloudinessValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Cloudiness ;
+                    rdfs:domain :Cloudiness_range ;
+                    rdfs:range xsd:unsignedShort .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxGradientValue
+:maxGradientValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :Gradient ;
+                  rdfs:domain :Gradient_range ;
+                  rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxHeightValue
+:maxHeightValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Height ;
+                rdfs:domain :Height_range ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxIlluminationIntensityValue
+:maxIlluminationIntensityValue rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :Illumination_intensity ;
+                               rdfs:domain :Illumination_intensity_range ;
+                               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxIntensityValue
+:maxIntensityValue rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :Intensity ;
+                   rdfs:domain :Rainfall_intensity_range ;
+                   rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxLatencyValue
+:maxLatencyValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Latency ;
+                 rdfs:domain :Latency_range .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxLengthValue
+:maxLengthValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Length ;
+                rdfs:domain :Length_scalar ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxParticulatesIntensityValue
+:maxParticulatesIntensityValue rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :Particulates_intensity ;
+                               rdfs:domain :Particulates_intensity_range ;
+                               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxParticulatesSizeValue
+:maxParticulatesSizeValue rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :Particulates_size ;
+                          rdfs:domain :Particulates_size_range ;
+                          rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxRadiusValue
+:maxRadiusValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Radius ;
+                rdfs:domain :Radius_range ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxShoulderWidthValue
+:maxShoulderWidthValue rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :Shoulder_width ;
+                       rdfs:domain :Shoulder_width_range ;
+                       rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxSpeedLimitValue
+:maxSpeedLimitValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Speed_limit ;
+                    rdfs:domain :Speed_limit_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxSpeedValue
+:maxSpeedValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :Speed ;
+               rdfs:domain :Wind_speed_range ;
+               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxSunPositionValue
+:maxSunPositionValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Sun_position ;
+                     rdfs:domain :Sun_position_range ;
+                     rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxSuperElevationValue
+:maxSuperElevationValue rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :Superelevation ;
+                        rdfs:domain :Superelevation_range ;
+                        rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxTemperatureValue
+:maxTemperatureValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Temperature ;
+                     rdfs:domain :Temperature_range ;
+                     rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxThroughputValue
+:maxThroughputValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Throughput ;
+                    rdfs:domain :Throughput_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxVisibilityValue
+:maxVisibilityValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Snowfall_visibility ;
+                    rdfs:domain :Snowfall_visibility_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#maxWidthValue
+:maxWidthValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :Width ;
+               rdfs:domain :Width_range ;
+               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minAccelerationValue
+:minAccelerationValue rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :Acceleration .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minCloudinessValue
+:minCloudinessValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Cloudiness ;
+                    rdfs:domain :Cloudiness_range ;
+                    rdfs:range xsd:unsignedShort .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minGradientValue
+:minGradientValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :Gradient ;
+                  rdfs:domain :Gradient_range ;
+                  rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minHeightValue
+:minHeightValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Height ;
+                rdfs:domain :Height_range ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minIlluminationIntensityValue
+:minIlluminationIntensityValue rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :Illumination_intensity ;
+                               rdfs:domain :Illumination_intensity_range ;
+                               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minIntensityValue
+:minIntensityValue rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :Intensity ;
+                   rdfs:domain :Rainfall_intensity_range ;
+                   rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minLatencyValue
+:minLatencyValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Latency ;
+                 rdfs:domain :Latency_range ;
+                 rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minLengthValue
+:minLengthValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Length ;
+                rdfs:domain :Length_range ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minParticulatesIntensityValue
+:minParticulatesIntensityValue rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :Particulates_intensity ;
+                               rdfs:domain :Particulates_intensity_range ;
+                               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minParticulatesSizeValue
+:minParticulatesSizeValue rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :Particulates_size ;
+                          rdfs:domain :Particulates_size_range .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minRadiusValue
+:minRadiusValue rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Radius ;
+                rdfs:domain :Radius_range ;
+                rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minShoulderWidthValue
+:minShoulderWidthValue rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :Shoulder_width ;
+                       rdfs:domain :Shoulder_width_range ;
+                       rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minSpeedLimitValue
+:minSpeedLimitValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Speed_limit ;
+                    rdfs:domain :Speed_limit_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minSpeedValue
+:minSpeedValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :Speed ;
+               rdfs:domain :Wind_speed_range ;
+               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minSunPositionValue
+:minSunPositionValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Sun_position ;
+                     rdfs:domain :Sun_position_range ;
+                     rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minSuperelevationValue
+:minSuperelevationValue rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :Superelevation ;
+                        rdfs:domain :Superelevation_range ;
+                        rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minTemperatureValue
+:minTemperatureValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Temperature ;
+                     rdfs:domain :Temperature_range ;
+                     rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minThroughputValue
+:minThroughputValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Throughput ;
+                    rdfs:domain :Throughput_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minVisibilityValue
+:minVisibilityValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Snowfall_visibility ;
+                    rdfs:domain :Snowfall_visibility_range ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#minWidthValue
+:minWidthValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :Width ;
+               rdfs:domain :Width_range ;
+               rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#particulatesIntensityValue
+:particulatesIntensityValue rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :Particulates_intensity ;
+                            rdfs:domain :Particulates_intensity_scalar ;
+                            rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#particulatesSizeValue
+:particulatesSizeValue rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :Particulates_size ;
+                       rdfs:domain :Particulates_size_scalar ;
+                       rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#radiusValue
+:radiusValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Radius ;
+             rdfs:domain :Radius_scalar ;
+             rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#shoulderWidthValue
+:shoulderWidthValue rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :Shoulder_width ;
+                    rdfs:domain :Shoulder_width_scalar ;
+                    rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#speedLimitValue
+:speedLimitValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Speed_limit ;
+                 rdfs:domain :Speed_limit_scalar ;
+                 rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#speedValue
+:speedValue rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :Speed ;
+            rdfs:domain :Wind_speed_scalar ;
+            rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#sunPositionValue
+:sunPositionValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :Sun_position ;
+                  rdfs:domain :Sun_position_scalar ;
+                  rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#superelevationValue
+:superelevationValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Superelevation ;
+                     rdfs:domain :Superelevation_scalar ;
+                     rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#temperatureValue
+:temperatureValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :Temperature ;
+                  rdfs:domain :Temperature_scalar ;
+                  rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#throughputValue
+:throughputValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Throughput ;
+                 rdfs:domain :Throughput_scalar ;
+                 rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Quantity ;
+      rdfs:range xsd:string .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#visibilityValue
+:visibilityValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Snowfall_visibility ;
+                 rdfs:domain :Snowfall_visibility_scalar ;
+                 rdfs:range xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#widthValue
+:widthValue rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :Width ;
+            rdfs:domain :Width_scalar ;
+            rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Abstraction_level
+:Abstraction_level rdf:type owl:Class ;
+                   rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Action
+:Action rdf:type owl:Class ;
+        rdfs:subClassOf :Attribute .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Additional_Information
+:Additional_Information rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Air_pressure
+:Air_pressure rdf:type owl:Class ;
+              rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Air_pressure_range
+:Air_pressure_range rdf:type owl:Class ;
+                    rdfs:subClassOf :Air_pressure .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Air_pressure_scalar
+:Air_pressure_scalar rdf:type owl:Class ;
+                     rdfs:subClassOf :Air_pressure .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Road_user_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Artificial_illumination
+:Artificial_illumination rdf:type owl:Class ;
+                         rdfs:subClassOf :Illumination .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Attribute
+:Attribute rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Average_duration
+:Average_duration rdf:type owl:Class ;
+                  rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Basic_road_structures
+:Basic_road_structures rdf:type owl:Class ;
+                       rdfs:subClassOf :Scenery_elements .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :Basic_road_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Changing__lane
+:Changing__lane rdf:type owl:Class ;
+                rdfs:subClassOf :Lateral_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cloudiness
+:Cloudiness rdf:type owl:Class ;
+            rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cloudiness_range
+:Cloudiness_range rdf:type owl:Class ;
+                  rdfs:subClassOf :Cloudiness ;
+                  owl:disjointWith :Cloudiness_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cloudiness_scalar
+:Cloudiness_scalar rdf:type owl:Class ;
+                   rdfs:subClassOf :Cloudiness .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Comfort
+:Comfort rdf:type owl:Class ;
+         rdfs:subClassOf :Indicator .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Communication
+:Communication rdf:type owl:Class ;
+               rdfs:subClassOf :Connectivity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Communication_technology
+:Communication_technology rdf:type owl:Class ;
+                          rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Communication_type
+:Communication_type rdf:type owl:Class ;
+                    rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Connectivity
+:Connectivity rdf:type owl:Class ;
+              rdfs:subClassOf :Environmental_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Conspicuity
+:Conspicuity rdf:type owl:Class ;
+             rdfs:subClassOf :Dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Correctness_of_functionality
+:Correctness_of_functionality rdf:type owl:Class ;
+                              rdfs:subClassOf :Scenario_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cross_road
+:Cross_road rdf:type owl:Class ;
+            rdfs:subClassOf :Intersection .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Crossing
+:Crossing rdf:type owl:Class ;
+          rdfs:subClassOf :Direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Curves
+:Curves rdf:type owl:Class ;
+        rdfs:subClassOf :Horizontal_plane .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cyclist
+:Cyclist rdf:type owl:Class ;
+         rdfs:subClassOf :Road_user_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Direction
+:Direction rdf:type owl:Class ;
+           rdfs:subClassOf :State .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Direction_of_travel
+:Direction_of_travel rdf:type owl:Class ;
+                     rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Distributopr_roads
+:Distributopr_roads rdf:type owl:Class ;
+                    rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Downlink
+:Downlink rdf:type owl:Class ;
+          rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area
+:Drivable_area rdf:type owl:Class ;
+               rdfs:subClassOf :Scenery_elements .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_edge
+:Drivable_area_edge rdf:type owl:Class ;
+                    rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_geometry
+:Drivable_area_geometry rdf:type owl:Class ;
+                        rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_induced_surface_condition
+:Drivable_area_induced_surface_condition rdf:type owl:Class ;
+                                         rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_lane_specification
+:Drivable_area_lane_specification rdf:type owl:Class ;
+                                  rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_signs
+:Drivable_area_signs rdf:type owl:Class ;
+                     rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_surface
+:Drivable_area_surface rdf:type owl:Class ;
+                       rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_surface_features
+:Drivable_area_surface_features rdf:type owl:Class ;
+                                rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_surface_type
+:Drivable_area_surface_type rdf:type owl:Class ;
+                            rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Drivable_area_type
+:Drivable_area_type rdf:type owl:Class ;
+                    rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Driving_forward
+:Driving_forward rdf:type owl:Class ;
+                 rdfs:subClassOf :Longitudinal_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dynamic_entity
+:Dynamic_entity rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dynamic_zone
+:Dynamic_zone rdf:type owl:Class ;
+              rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Efficiency
+:Efficiency rdf:type owl:Class ;
+            rdfs:subClassOf :Indicator .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Encounter_rate_per_hour
+:Encounter_rate_per_hour rdf:type owl:Class ;
+                         rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Encounter_rate_per_km
+:Encounter_rate_per_km rdf:type owl:Class ;
+                       rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Environmental_condition
+:Environmental_condition rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Exposure_metric
+:Exposure_metric rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Exposure_probability
+:Exposure_probability rdf:type owl:Class ;
+                      rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fixed_zone
+:Fixed_zone rdf:type owl:Class ;
+            rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Following
+:Following rdf:type owl:Class ;
+           rdfs:subClassOf :Role_of_dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Following_lane
+:Following_lane rdf:type owl:Class ;
+                rdfs:subClassOf :Lateral_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Freezing_rain
+:Freezing_rain rdf:type owl:Class ;
+               rdfs:subClassOf :Weather .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Freight_distribution_centre
+:Freight_distribution_centre rdf:type owl:Class ;
+                             rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Frequency_in_SCDB
+:Frequency_in_SCDB rdf:type owl:Class ;
+                   rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Frequency_per_driven_hour
+:Frequency_per_driven_hour rdf:type owl:Class ;
+                           rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Frequency_per_driven_km
+:Frequency_per_driven_km rdf:type owl:Class ;
+                         rdfs:subClassOf :Exposure_metric .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Geo-fenced_areas
+:Geo-fenced_areas rdf:type owl:Class ;
+                  rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gesture
+:Gesture rdf:type owl:Class ;
+         rdfs:subClassOf :Conspicuity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Grade_separated
+:Grade_separated rdf:type owl:Class ;
+                 rdfs:subClassOf :Intersection .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gradient
+:Gradient rdf:type owl:Class ;
+          rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gradient_range
+:Gradient_range rdf:type owl:Class ;
+                rdfs:subClassOf :Gradient .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gradient_scalar
+:Gradient_scalar rdf:type owl:Class ;
+                 rdfs:subClassOf :Gradient .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Hail
+:Hail rdf:type owl:Class ;
+      rdfs:subClassOf :Weather .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Height
+:Height rdf:type owl:Class ;
+        rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Height_range
+:Height_range rdf:type owl:Class ;
+              rdfs:subClassOf :Height .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Height_scalar
+:Height_scalar rdf:type owl:Class ;
+               rdfs:subClassOf :Height .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Horizontal_plane
+:Horizontal_plane rdf:type owl:Class ;
+                  rdfs:subClassOf :Drivable_area_geometry .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Humidity
+:Humidity rdf:type owl:Class ;
+          rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Humidity_range
+:Humidity_range rdf:type owl:Class ;
+                rdfs:subClassOf :Humidity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Humidity_scalar
+:Humidity_scalar rdf:type owl:Class ;
+                 rdfs:subClassOf :Humidity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Illumination
+:Illumination rdf:type owl:Class ;
+              rdfs:subClassOf :Environmental_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Illumination_intensity
+:Illumination_intensity rdf:type owl:Class ;
+                        rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Illumination_intensity_range
+:Illumination_intensity_range rdf:type owl:Class ;
+                              rdfs:subClassOf :Illumination_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Illumination_intensity_scalar
+:Illumination_intensity_scalar rdf:type owl:Class ;
+                               rdfs:subClassOf :Illumination_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Inanimate_obstacle
+:Inanimate_obstacle rdf:type owl:Class ;
+                    rdfs:subClassOf :Road_user_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicator
+:Indicator rdf:type owl:Class ;
+           rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Intended_execution_platform
+:Intended_execution_platform rdf:type owl:Class ;
+                             rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Interference_zone
+:Interference_zone rdf:type owl:Class ;
+                   rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Intersection
+:Intersection rdf:type owl:Class ;
+              rdfs:subClassOf :Junctions .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Intersection_type
+:Intersection_type rdf:type owl:Class ;
+                   rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Junctions
+:Junctions rdf:type owl:Class ;
+           rdfs:subClassOf :Scenery_elements .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lane_dimensions
+:Lane_dimensions rdf:type owl:Class ;
+                 rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lane_marking
+:Lane_marking rdf:type owl:Class ;
+              rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lane_type
+:Lane_type rdf:type owl:Class ;
+           rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lane_usage
+:Lane_usage rdf:type owl:Class ;
+            rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Latency
+:Latency rdf:type owl:Class ;
+         rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Latency_range
+:Latency_range rdf:type owl:Class ;
+               rdfs:subClassOf :Latency .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Latency_scalar
+:Latency_scalar rdf:type owl:Class ;
+                rdfs:subClassOf :Latency .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lateral_action
+:Lateral_action rdf:type owl:Class ;
+                rdfs:subClassOf :Action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Lateral_position
+:Lateral_position rdf:type owl:Class ;
+                  rdfs:subClassOf :State .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Leading
+:Leading rdf:type owl:Class ;
+         rdfs:subClassOf :Role_of_dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Left_of_subject
+:Left_of_subject rdf:type owl:Class ;
+                 rdfs:subClassOf :Lateral_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Length
+:Length rdf:type owl:Class ;
+        rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Length_range
+:Length_range rdf:type owl:Class ;
+              rdfs:subClassOf :Length .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Length_scalar
+:Length_scalar rdf:type owl:Class ;
+               rdfs:subClassOf :Length .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Light
+:Light rdf:type owl:Class ;
+       rdfs:subClassOf :Conspicuity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Line_markers
+:Line_markers rdf:type owl:Class ;
+              rdfs:subClassOf :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Longitudinal_action
+:Longitudinal_action rdf:type owl:Class ;
+                     rdfs:subClassOf :Action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Longitudinal_plane
+:Longitudinal_plane rdf:type owl:Class ;
+                    rdfs:subClassOf :Drivable_area_geometry .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Longitudinal_position
+:Longitudinal_position rdf:type owl:Class ;
+                       rdfs:subClassOf :State .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Minor_or_local_roads
+:Minor_or_local_roads rdf:type owl:Class ;
+                      rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Mixed_action
+:Mixed_action rdf:type owl:Class ;
+              rdfs:subClassOf :Action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Motorways_or_highways_or_interstates
+:Motorways_or_highways_or_interstates rdf:type owl:Class ;
+                                      rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Natural_illumination
+:Natural_illumination rdf:type owl:Class ;
+                      rdfs:subClassOf :Illumination .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#No_role
+:No_role rdf:type owl:Class ;
+         rdfs:subClassOf :Role_of_dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Parking_maneuver
+:Parking_maneuver rdf:type owl:Class ;
+                  rdfs:subClassOf :Mixed_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Parking_space
+:Parking_space rdf:type owl:Class ;
+               rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates
+:Particulates rdf:type owl:Class ;
+              rdfs:subClassOf :Environmental_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_intensity
+:Particulates_intensity rdf:type owl:Class ;
+                        rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_intensity_range
+:Particulates_intensity_range rdf:type owl:Class ;
+                              rdfs:subClassOf :Particulates_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_intensity_scalar
+:Particulates_intensity_scalar rdf:type owl:Class ;
+                               rdfs:subClassOf :Particulates_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_size
+:Particulates_size rdf:type owl:Class ;
+                   rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_size_range
+:Particulates_size_range rdf:type owl:Class ;
+                         rdfs:subClassOf :Particulates_size ;
+                         owl:disjointWith :Particulates_size_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_size_scalar
+:Particulates_size_scalar rdf:type owl:Class ;
+                          rdfs:subClassOf :Particulates_size .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Particulates_type
+:Particulates_type rdf:type owl:Class ;
+                   rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Pedestrian
+:Pedestrian rdf:type owl:Class ;
+            rdfs:subClassOf :Road_user_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Port_zone
+:Port_zone rdf:type owl:Class ;
+           rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Positioning
+:Positioning rdf:type owl:Class ;
+             rdfs:subClassOf :Connectivity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Primary_roads
+:Primary_roads rdf:type owl:Class ;
+               rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Prioritized
+:Prioritized rdf:type owl:Class ;
+             rdfs:subClassOf :Role_of_dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Quality
+:Quality rdf:type owl:Class ;
+         rdfs:subClassOf :Scenario_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Quantity
+:Quantity rdf:type owl:Class ;
+          rdfs:subClassOf :Attribute ;
+          owl:disjointWith :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#RTK_correction
+:RTK_correction rdf:type owl:Class ;
+                rdfs:subClassOf :Connectivity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#RTK_correction_type
+:RTK_correction_type rdf:type owl:Class ;
+                     rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Radial_roads
+:Radial_roads rdf:type owl:Class ;
+              rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Radius
+:Radius rdf:type owl:Class ;
+        rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Radius_range
+:Radius_range rdf:type owl:Class ;
+              rdfs:subClassOf :Radius .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Radius_scalar
+:Radius_scalar rdf:type owl:Class ;
+               rdfs:subClassOf :Radius .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rainfall
+:Rainfall rdf:type owl:Class ;
+          rdfs:subClassOf :Weather .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rainfall_intensity
+:Rainfall_intensity rdf:type owl:Class ;
+                    rdfs:subClassOf :Quantity ;
+                    owl:disjointWith :Temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rainfall_intensity_range
+:Rainfall_intensity_range rdf:type owl:Class ;
+                          rdfs:subClassOf :Rainfall_intensity ;
+                          owl:disjointWith :Rainfall_intensity_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rainfall_intensity_scalar
+:Rainfall_intensity_scalar rdf:type owl:Class ;
+                           rdfs:subClassOf :Rainfall_intensity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rainfall_type
+:Rainfall_type rdf:type owl:Class ;
+               rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Regions_or_states
+:Regions_or_states rdf:type owl:Class ;
+                   rdfs:subClassOf :Zones .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Relative_speed
+:Relative_speed rdf:type owl:Class ;
+                rdfs:subClassOf :State .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Reversing
+:Reversing rdf:type owl:Class ;
+           rdfs:subClassOf :Longitudinal_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Right_of_subject
+:Right_of_subject rdf:type owl:Class ;
+                  rdfs:subClassOf :Lateral_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Road_user_type
+:Road_user_type rdf:type owl:Class ;
+                rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Role
+:Role rdf:type owl:Class ;
+      rdfs:subClassOf :Attribute .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Role_of_dynamic_entity
+:Role_of_dynamic_entity rdf:type owl:Class ;
+                        rdfs:subClassOf :Role .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Roundabout
+:Roundabout rdf:type owl:Class ;
+            rdfs:subClassOf :Junctions .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Roundabout_type
+:Roundabout_type rdf:type owl:Class ;
+                 rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Safety
+:Safety rdf:type owl:Class ;
+        rdfs:subClassOf :Indicator ,
+                        :Scenario_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Satellite_based_global_positioning
+:Satellite_based_global_positioning rdf:type owl:Class ;
+                                    rdfs:subClassOf :Positioning ;
+                                    owl:disjointWith :Satellite_local_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Satellite_local_positioning
+:Satellite_local_positioning rdf:type owl:Class ;
+                             rdfs:subClassOf :Positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Scenario_source
+:Scenario_source rdf:type owl:Class ;
+                 rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Scenario_type
+:Scenario_type rdf:type owl:Class ;
+               rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Scenario_usage
+:Scenario_usage rdf:type owl:Class ;
+                rdfs:subClassOf :Additional_Information .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Scenery_elements
+:Scenery_elements rdf:type owl:Class .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shared_space
+:Shared_space rdf:type owl:Class ;
+              rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shoulder
+:Shoulder rdf:type owl:Class ;
+          rdfs:subClassOf :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shoulder_width
+:Shoulder_width rdf:type owl:Class ;
+                rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shoulder_width_range
+:Shoulder_width_range rdf:type owl:Class ;
+                      rdfs:subClassOf :Shoulder_width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shoulder_width_scalar
+:Shoulder_width_scalar rdf:type owl:Class ;
+                       rdfs:subClassOf :Shoulder_width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sign_feature
+:Sign_feature rdf:type owl:Class ;
+              rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sign_type
+:Sign_type rdf:type owl:Class ;
+           rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_interference
+:Signal_interference rdf:type owl:Class ;
+                     rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_interference_range
+:Signal_interference_range rdf:type owl:Class ;
+                           rdfs:subClassOf :Signal_interference .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_interference_scalar
+:Signal_interference_scalar rdf:type owl:Class ;
+                            rdfs:subClassOf :Signal_interference .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_strength
+:Signal_strength rdf:type owl:Class ;
+                 rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_strength_range
+:Signal_strength_range rdf:type owl:Class ;
+                       rdfs:subClassOf :Signal_strength .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signal_strength_scalar
+:Signal_strength_scalar rdf:type owl:Class ;
+                        rdfs:subClassOf :Signal_strength .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Slip_roads_or_off-ramps
+:Slip_roads_or_off-ramps rdf:type owl:Class ;
+                         rdfs:subClassOf :Drivable_area_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowbanks
+:Snowbanks rdf:type owl:Class ;
+           rdfs:subClassOf :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowfall
+:Snowfall rdf:type owl:Class ;
+          rdfs:subClassOf :Weather .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowfall_visibility
+:Snowfall_visibility rdf:type owl:Class ;
+                     rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowfall_visibility_range
+:Snowfall_visibility_range rdf:type owl:Class ;
+                           rdfs:subClassOf :Snowfall_visibility ;
+                           owl:disjointWith :Snowfall_visibility_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snowfall_visibility_scalar
+:Snowfall_visibility_scalar rdf:type owl:Class ;
+                            rdfs:subClassOf :Snowfall_visibility .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Solar_flare
+:Solar_flare rdf:type owl:Class ;
+             rdfs:subClassOf :Environmental_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Solid_barriers
+:Solid_barriers rdf:type owl:Class ;
+                rdfs:subClassOf :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sound
+:Sound rdf:type owl:Class ;
+       rdfs:subClassOf :Conspicuity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_structures
+:Special_structures rdf:type owl:Class ;
+                    rdfs:subClassOf :Scenery_elements .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_structures_dimension
+:Special_structures_dimension rdf:type owl:Class ;
+                              rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_structures_type
+:Special_structures_type rdf:type owl:Class ;
+                         rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_structures_usage
+:Special_structures_usage rdf:type owl:Class ;
+                          rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_vehicle_type
+:Special_vehicle_type rdf:type owl:Class ;
+                      rdfs:subClassOf :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Speed_limit
+:Speed_limit rdf:type owl:Class ;
+             rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Speed_limit_range
+:Speed_limit_range rdf:type owl:Class ;
+                   rdfs:subClassOf :Speed_limit .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Speed_limit_scalar
+:Speed_limit_scalar rdf:type owl:Class ;
+                    rdfs:subClassOf :Speed_limit .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Staggered
+:Staggered rdf:type owl:Class ;
+           rdfs:subClassOf :Intersection .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf :Attribute .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Straight_lines
+:Straight_lines rdf:type owl:Class ;
+                rdfs:subClassOf :Horizontal_plane .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Street_furniture
+:Street_furniture rdf:type owl:Class ;
+                  rdfs:subClassOf :Basic_road_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Streetlight
+:Streetlight rdf:type owl:Class ;
+             rdfs:subClassOf :Basic_road_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sun_position
+:Sun_position rdf:type owl:Class ;
+              rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sun_position_range
+:Sun_position_range rdf:type owl:Class ;
+                    rdfs:subClassOf :Sun_position ;
+                    owl:disjointWith :Sun_position_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sun_position_scalar
+:Sun_position_scalar rdf:type owl:Class ;
+                     rdfs:subClassOf :Sun_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Superelevation
+:Superelevation rdf:type owl:Class ;
+                rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Superelevation_range
+:Superelevation_range rdf:type owl:Class ;
+                      rdfs:subClassOf :Superelevation ;
+                      owl:disjointWith :Superelevation_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Superelevation_scalar
+:Superelevation_scalar rdf:type owl:Class ;
+                       rdfs:subClassOf :Superelevation .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Surface_temperature
+:Surface_temperature rdf:type owl:Class ;
+                     rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Surface_temperature_range
+:Surface_temperature_range rdf:type owl:Class ;
+                           rdfs:subClassOf :Surface_temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Surface_temperature_scalar
+:Surface_temperature_scalar rdf:type owl:Class ;
+                            rdfs:subClassOf :Surface_temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Swerving
+:Swerving rdf:type owl:Class ;
+          rdfs:subClassOf :Lateral_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#T-junction
+:T-junction rdf:type owl:Class ;
+            rdfs:subClassOf :Intersection .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temperature_range
+:Temperature_range rdf:type owl:Class ;
+                   rdfs:subClassOf :Temperature ;
+                   owl:disjointWith :Temperature_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temperature_scalar
+:Temperature_scalar rdf:type owl:Class ;
+                    rdfs:subClassOf :Temperature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temporary_drivable_structures
+:Temporary_drivable_structures rdf:type owl:Class ;
+                               rdfs:subClassOf :Scenery_elements .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temporary_line_markers
+:Temporary_line_markers rdf:type owl:Class ;
+                        rdfs:subClassOf :Drivable_area_edge .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Throughput
+:Throughput rdf:type owl:Class ;
+            rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Throughput_range
+:Throughput_range rdf:type owl:Class ;
+                  rdfs:subClassOf :Throughput .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Throughput_scalar
+:Throughput_scalar rdf:type owl:Class ;
+                   rdfs:subClassOf :Throughput .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Traffic_agent_type
+:Traffic_agent_type rdf:type owl:Class ;
+                    rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Transverse_plane
+:Transverse_plane rdf:type owl:Class ;
+                  rdfs:subClassOf :Drivable_area_geometry .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Transverse_plane_type
+:Transverse_plane_type rdf:type owl:Class ;
+                       rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Turning
+:Turning rdf:type owl:Class ;
+         rdfs:subClassOf :Lateral_action .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf :Attribute .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Uplink
+:Uplink rdf:type owl:Class ;
+        rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vegetation
+:Vegetation rdf:type owl:Class ;
+            rdfs:subClassOf :Basic_road_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vehicle
+:Vehicle rdf:type owl:Class ;
+         rdfs:subClassOf :Road_user_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Virtual_test_platform_verification
+:Virtual_test_platform_verification rdf:type owl:Class ;
+                                    rdfs:subClassOf :Scenario_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Visibility
+:Visibility rdf:type owl:Class ;
+            rdfs:subClassOf :Dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Weather
+:Weather rdf:type owl:Class ;
+         rdfs:subClassOf :Environmental_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Width
+:Width rdf:type owl:Class ;
+       rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Width_range
+:Width_range rdf:type owl:Class ;
+             rdfs:subClassOf :Width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Width_scalar
+:Width_scalar rdf:type owl:Class ;
+              rdfs:subClassOf :Width .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wind
+:Wind rdf:type owl:Class ;
+      rdfs:subClassOf :Weather .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wind_direction
+:Wind_direction rdf:type owl:Class ;
+                rdfs:subClassOf :Type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wind_speed
+:Wind_speed rdf:type owl:Class ;
+            rdfs:subClassOf :Quantity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wind_speed_range
+:Wind_speed_range rdf:type owl:Class ;
+                  rdfs:subClassOf :Wind_speed ;
+                  owl:disjointWith :Wind_speed_scalar .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wind_speed_scalar
+:Wind_speed_scalar rdf:type owl:Class ;
+                   rdfs:subClassOf :Wind_speed .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Y-junction
+:Y-junction rdf:type owl:Class ;
+            rdfs:subClassOf :Intersection .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Yielding
+:Yielding rdf:type owl:Class ;
+          rdfs:subClassOf :Role_of_dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Zones
+:Zones rdf:type owl:Class ;
+       rdfs:subClassOf :Scenery_elements .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Abstract
+:Abstract rdf:type owl:NamedIndividual ,
+                   :Abstraction_level .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Accelerating
+:Accelerating rdf:type owl:NamedIndividual ,
+                       :Driving_forward ,
+                       :Reversing ;
+              :minAccelerationValue "0.0"^^xsd:float ;
+              :unit "m/s^2" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Adjacent_lane
+:Adjacent_lane rdf:type owl:NamedIndividual ,
+                        :Left_of_subject ,
+                        :Right_of_subject .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Adult
+:Adult rdf:type owl:NamedIndividual ,
+                :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Agricultural_vehicle
+:Agricultural_vehicle rdf:type owl:NamedIndividual ,
+                               :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Ambulance
+:Ambulance rdf:type owl:NamedIndividual ,
+                    :Special_vehicle_type ,
+                    :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Ambulance_siren
+:Ambulance_siren rdf:type owl:NamedIndividual ,
+                          :Sound .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Animal
+:Animal rdf:type owl:NamedIndividual ,
+                 :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Asphalt
+:Asphalt rdf:type owl:NamedIndividual ,
+                  :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Automatic_access_control_barrier
+:Automatic_access_control_barrier rdf:type owl:NamedIndividual ,
+                                           :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Automatically_created
+:Automatically_created rdf:type owl:NamedIndividual ,
+                                :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Availability
+:Availability rdf:type owl:NamedIndividual ,
+                       :Quality .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Beacon_light
+:Beacon_light rdf:type owl:NamedIndividual ,
+                       :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Behavioural_Safety
+:Behavioural_Safety rdf:type owl:NamedIndividual ,
+                             :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Behind_subject
+:Behind_subject rdf:type owl:NamedIndividual ,
+                         :Longitudinal_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#BeiDou
+:BeiDou rdf:type owl:NamedIndividual ,
+                 :Satellite_based_global_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Beside_subject
+:Beside_subject rdf:type owl:NamedIndividual ,
+                         :Longitudinal_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Bicyclist
+:Bicyclist rdf:type owl:NamedIndividual ,
+                    :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Blowing_debris
+:Blowing_debris rdf:type owl:NamedIndividual ,
+                         :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Blurred_lane_marking
+:Blurred_lane_marking rdf:type owl:NamedIndividual ,
+                               :Lane_marking .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Brake_light
+:Brake_light rdf:type owl:NamedIndividual ,
+                      :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Bridge
+:Bridge rdf:type owl:NamedIndividual ,
+                 :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Bus
+:Bus rdf:type owl:NamedIndividual ,
+              :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Bus_lane
+:Bus_lane rdf:type owl:NamedIndividual ,
+                   :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Calm
+:Calm rdf:type owl:NamedIndividual ,
+               :Wind_speed_range ;
+      :maxSpeedValue "0.2"^^xsd:float ;
+      :minSpeedValue "0.0"^^xsd:float ;
+      :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cellular
+:Cellular rdf:type owl:NamedIndividual ,
+                   :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cement_concrete
+:Cement_concrete rdf:type owl:NamedIndividual ,
+                          :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Child
+:Child rdf:type owl:NamedIndividual ,
+                :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Clear
+:Clear rdf:type owl:NamedIndividual ,
+                :Cloudiness_range ;
+       :maxCloudinessValue "1"^^xsd:unsignedShort ;
+       :minCloudinessValue "0"^^xsd:unsignedShort ;
+       :unit "oktas" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Clear_lane_marking
+:Clear_lane_marking rdf:type owl:NamedIndividual ,
+                             :Lane_marking .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cloudburst
+:Cloudburst rdf:type owl:NamedIndividual ,
+                     :Rainfall_intensity_range ;
+            :minIntensityValue "100.0"^^xsd:float ;
+            :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cobblestone
+:Cobblestone rdf:type owl:NamedIndividual ,
+                      :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Collision_information
+:Collision_information rdf:type owl:NamedIndividual ,
+                                :Dynamic_entity .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Comfortability
+:Comfortability rdf:type owl:NamedIndividual ,
+                         :Quality .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Compact
+:Compact rdf:type owl:NamedIndividual ,
+                  :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Concrete
+:Concrete rdf:type owl:NamedIndividual ,
+                   :Abstraction_level .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cones
+:Cones rdf:type owl:NamedIndividual ,
+                :Solid_barriers .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Construction_equipment
+:Construction_equipment rdf:type owl:NamedIndividual ,
+                                 :Inanimate_obstacle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Construction_site_detour
+:Construction_site_detour rdf:type owl:NamedIndividual ,
+                                   :Temporary_drivable_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Consumer_protection_test
+:Consumer_protection_test rdf:type owl:NamedIndividual ,
+                                   :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Convective_rain
+:Convective_rain rdf:type owl:NamedIndividual ,
+                          :Rainfall_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Country_specific
+:Country_specific rdf:type owl:NamedIndividual ,
+                           :RTK_correction_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cracks
+:Cracks rdf:type owl:NamedIndividual ,
+                 :Drivable_area_surface_features .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Crane
+:Crane rdf:type owl:NamedIndividual ,
+                :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Crash_data
+:Crash_data rdf:type owl:NamedIndividual ,
+                     :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Critical
+:Critical rdf:type owl:NamedIndividual ,
+                   :Scenario_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cross_wind
+:Cross_wind rdf:type owl:NamedIndividual ,
+                     :Wind_direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Curb
+:Curb rdf:type owl:NamedIndividual ,
+               :Solid_barriers .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cybersecurity
+:Cybersecurity rdf:type owl:NamedIndividual ,
+                        :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Cycle_lane
+:Cycle_lane rdf:type owl:NamedIndividual ,
+                     :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#DSRC
+:DSRC rdf:type owl:NamedIndividual ,
+               :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dangerous_goods_vehicle
+:Dangerous_goods_vehicle rdf:type owl:NamedIndividual ,
+                                  :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Daytime
+:Daytime rdf:type owl:NamedIndividual ,
+                  :Illumination_intensity_range ;
+         :minIlluminationIntensityValue "2000.0"^^xsd:float ;
+         :unit "lux" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Debris
+:Debris rdf:type owl:NamedIndividual ,
+                 :Inanimate_obstacle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Decelerating
+:Decelerating rdf:type owl:NamedIndividual ,
+                       :Driving_forward ,
+                       :Reversing ;
+              :maxAccelerationValue "0.0"^^xsd:float ;
+              :unit "m/s^2" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dense_foliage
+:Dense_foliage rdf:type owl:NamedIndividual ,
+                        :Interference_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Divided
+:Divided rdf:type owl:NamedIndividual ,
+                  :Transverse_plane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Double
+:Double rdf:type owl:NamedIndividual ,
+                 :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Double_left
+:Double_left rdf:type owl:NamedIndividual ,
+                      :Changing__lane .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Double_right
+:Double_right rdf:type owl:NamedIndividual ,
+                       :Changing__lane .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Down-slope
+:Down-slope rdf:type owl:NamedIndividual ,
+                     :Longitudinal_plane ;
+            :maxGradientValue "0.0"^^xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Driving_on
+:Driving_on rdf:type owl:NamedIndividual ,
+                     :Special_structures_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Driving_under
+:Driving_under rdf:type owl:NamedIndividual ,
+                        :Special_structures_usage .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dust
+:Dust rdf:type owl:NamedIndividual ,
+               :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Dynamic_rain
+:Dynamic_rain rdf:type owl:NamedIndividual ,
+                       :Rainfall_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#E-bike_user
+:E-bike_user rdf:type owl:NamedIndividual ,
+                      :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Efficiency
+:Efficiency rdf:type owl:NamedIndividual ,
+                     :Quality .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Emergency_lane
+:Emergency_lane rdf:type owl:NamedIndividual ,
+                         :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Emergency_signal_light
+:Emergency_signal_light rdf:type owl:NamedIndividual ,
+                                 :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Environmental_zone
+:Environmental_zone rdf:type owl:NamedIndividual ,
+                             :Fixed_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Extreme_rain
+:Extreme_rain rdf:type owl:NamedIndividual ,
+                       :Rainfall_intensity_range ;
+              :minIntensityValue "7.6"^^xsd:float ;
+              :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Failure
+:Failure rdf:type owl:NamedIndividual ,
+                  :Scenario_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Faster
+:Faster rdf:type owl:NamedIndividual ,
+                 :Relative_speed .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Final_role
+:Final_role rdf:type owl:NamedIndividual ,
+                     :Following ,
+                     :Leading ,
+                     :No_role ,
+                     :Prioritized ,
+                     :Yielding .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fire_engine
+:Fire_engine rdf:type owl:NamedIndividual ,
+                      :Special_vehicle_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fire_fighter_siren
+:Fire_fighter_siren rdf:type owl:NamedIndividual ,
+                             :Sound .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fire_truck
+:Fire_truck rdf:type owl:NamedIndividual ,
+                     :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fixed_signs
+:Fixed_signs rdf:type owl:NamedIndividual ,
+                      :Sign_feature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fleet_management
+:Fleet_management rdf:type owl:NamedIndividual ,
+                           :Communication_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Flooded
+:Flooded rdf:type owl:NamedIndividual ,
+                  :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fog_light
+:Fog_light rdf:type owl:NamedIndividual ,
+                    :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fresh_breeze
+:Fresh_breeze rdf:type owl:NamedIndividual ,
+                       :Wind_speed_range ;
+              :maxSpeedValue "10.7"^^xsd:float ;
+              :minSpeedValue "8.0"^^xsd:float ;
+              :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#From_far_side
+:From_far_side rdf:type owl:NamedIndividual ,
+                        :Crossing .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#From_left
+:From_left rdf:type owl:NamedIndividual ,
+                    :Crossing .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#From_near_side
+:From_near_side rdf:type owl:NamedIndividual ,
+                         :Crossing .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#From_right
+:From_right rdf:type owl:NamedIndividual ,
+                     :Crossing .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fully_blocked_from_view
+:Fully_blocked_from_view rdf:type owl:NamedIndividual ,
+                                  :Visibility .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Fully_in_view
+:Fully_in_view rdf:type owl:NamedIndividual ,
+                        :Visibility .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Functional
+:Functional rdf:type owl:NamedIndividual ,
+                     :Abstraction_level .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Functional_safety
+:Functional_safety rdf:type owl:NamedIndividual ,
+                            :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gale
+:Gale rdf:type owl:NamedIndividual ,
+               :Wind_speed_range ;
+      :maxSpeedValue "20.7"^^xsd:float ;
+      :minSpeedValue "17.2"^^xsd:float ;
+      :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Galileo
+:Galileo rdf:type owl:NamedIndividual ,
+                  :Satellite_based_global_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gentle_breeze
+:Gentle_breeze rdf:type owl:NamedIndividual ,
+                        :Wind_speed_range ;
+               :maxSpeedValue "5.4"^^xsd:float ;
+               :minSpeedValue "3.4"^^xsd:float ;
+               :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Goods_vehicle
+:Goods_vehicle rdf:type owl:NamedIndividual ,
+                        :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Granite_setts
+:Granite_setts rdf:type owl:NamedIndividual ,
+                        :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Grass
+:Grass rdf:type owl:NamedIndividual ,
+                :Shoulder .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Grating
+:Grating rdf:type owl:NamedIndividual ,
+                  :Solid_barriers .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Gravel
+:Gravel rdf:type owl:NamedIndividual ,
+                 :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Hazard_light
+:Hazard_light rdf:type owl:NamedIndividual ,
+                       :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Head_wind
+:Head_wind rdf:type owl:NamedIndividual ,
+                    :Wind_direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Headlight_high_beam
+:Headlight_high_beam rdf:type owl:NamedIndividual ,
+                              :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Headlight_low_beam
+:Headlight_low_beam rdf:type owl:NamedIndividual ,
+                             :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Hearing-impaired_pedestrian
+:Hearing-impaired_pedestrian rdf:type owl:NamedIndividual ,
+                                      :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Heavy_rain
+:Heavy_rain rdf:type owl:NamedIndividual ,
+                     :Rainfall_intensity_range ;
+            :maxIntensityValue "50.0"^^xsd:float ;
+            :minIntensityValue "7.6"^^xsd:float ;
+            :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Heavy_snow
+:Heavy_snow rdf:type owl:NamedIndividual ,
+                     :Snowfall_visibility_range ;
+            :maxVisibilityValue "0.5"^^xsd:float ;
+            :unit "km" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#High_wind
+:High_wind rdf:type owl:NamedIndividual ,
+                    :Wind_speed_range ;
+           :minSpeedValue "17.1"^^xsd:float ;
+           :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Horn
+:Horn rdf:type owl:NamedIndividual ,
+               :Sound .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Horse_rider
+:Horse_rider rdf:type owl:NamedIndividual ,
+                      :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Hurricane_force
+:Hurricane_force rdf:type owl:NamedIndividual ,
+                          :Wind_speed_range ;
+                 :minSpeedValue "32.7"^^xsd:float ;
+                 :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#ITS-G5
+:ITS-G5 rdf:type owl:NamedIndividual ,
+                 :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Icy
+:Icy rdf:type owl:NamedIndividual ,
+              :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#In_front_of_subject
+:In_front_of_subject rdf:type owl:NamedIndividual ,
+                              :Longitudinal_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_changing_lane
+:Indicate_changing_lane rdf:type owl:NamedIndividual ,
+                                 :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_going_through
+:Indicate_going_through rdf:type owl:NamedIndividual ,
+                                 :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_slowing_down
+:Indicate_slowing_down rdf:type owl:NamedIndividual ,
+                                :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_stopping
+:Indicate_stopping rdf:type owl:NamedIndividual ,
+                            :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_turning_left
+:Indicate_turning_left rdf:type owl:NamedIndividual ,
+                                :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_turning_right
+:Indicate_turning_right rdf:type owl:NamedIndividual ,
+                                 :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indicate_yielding
+:Indicate_yielding rdf:type owl:NamedIndividual ,
+                            :Gesture .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indoor_lights
+:Indoor_lights rdf:type owl:NamedIndividual ,
+                        :Artificial_illumination .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Industrial_zone
+:Industrial_zone rdf:type owl:NamedIndividual ,
+                          :Fixed_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Information_signs
+:Information_signs rdf:type owl:NamedIndividual ,
+                            :Sign_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Initial_role
+:Initial_role rdf:type owl:NamedIndividual ,
+                       :Following ,
+                       :Leading ,
+                       :No_role ,
+                       :Prioritized ,
+                       :Yielding .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Interior_light
+:Interior_light rdf:type owl:NamedIndividual ,
+                         :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Intermediate_role
+:Intermediate_role rdf:type owl:NamedIndividual ,
+                            :Following ,
+                            :Leading ,
+                            :No_role ,
+                            :Prioritized ,
+                            :Yielding .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Keeping_speed
+:Keeping_speed rdf:type owl:NamedIndividual ,
+                        :Driving_forward ,
+                        :Reversing ;
+               :accelerationValue "0.0"^^xsd:float ;
+               :unit "m/s^2" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Large
+:Large rdf:type owl:NamedIndividual ,
+                :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Large_size_animal
+:Large_size_animal rdf:type owl:NamedIndividual ,
+                            :Animal .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Left
+:Left rdf:type owl:NamedIndividual ,
+               :Changing__lane ,
+               :Swerving ,
+               :Turning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Left_hand_travel
+:Left_hand_travel rdf:type owl:NamedIndividual ,
+                           :Direction_of_travel .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Left_signal_light
+:Left_signal_light rdf:type owl:NamedIndividual ,
+                            :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Left_u-turn
+:Left_u-turn rdf:type owl:NamedIndividual ,
+                      :Turning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Level_plane
+:Level_plane rdf:type owl:NamedIndividual ,
+                      :Longitudinal_plane ;
+             :gradientValue "0.0"^^xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Light_air
+:Light_air rdf:type owl:NamedIndividual ,
+                    :Wind_speed_range ;
+           :maxSpeedValue "1.5"^^xsd:float ;
+           :minSpeedValue "0.3"^^xsd:float ;
+           :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Light_breeze
+:Light_breeze rdf:type owl:NamedIndividual ,
+                       :Wind_speed_range ;
+              :maxSpeedValue "3.3"^^xsd:float ;
+              :minSpeedValue "1.6"^^xsd:float ;
+              :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Light_rain
+:Light_rain rdf:type owl:NamedIndividual ,
+                     :Rainfall_intensity_range ;
+            :maxIntensityValue "2.5"^^xsd:float ;
+            :minIntensityValue "0.0"^^xsd:float ;
+            :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Light_snow
+:Light_snow rdf:type owl:NamedIndividual ,
+                     :Snowfall_visibility_range ;
+            :minVisibilityValue "1.0"^^xsd:float ;
+            :unit "km" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Logical
+:Logical rdf:type owl:NamedIndividual ,
+                  :Abstraction_level .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Long_or_large_vehicle
+:Long_or_large_vehicle rdf:type owl:NamedIndividual ,
+                                :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Low-ambient_lighting_condition
+:Low-ambient_lighting_condition rdf:type owl:NamedIndividual ,
+                                         :Illumination_intensity_range ;
+                                :maxIlluminationIntensityValue 2000 ;
+                                :minIlluminationIntensityValue "1.0"^^xsd:float ;
+                                :unit "lux" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Low_wind
+:Low_wind rdf:type owl:NamedIndividual ,
+                   :Wind_speed_range ;
+          :maxSpeedValue "5.4"^^xsd:float ;
+          :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Manually_created
+:Manually_created rdf:type owl:NamedIndividual ,
+                           :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Medium_rain
+:Medium_rain rdf:type owl:NamedIndividual ,
+                      :Rainfall_intensity_range ;
+             :maxIntensityValue "7.6"^^xsd:float ;
+             :minIntensityValue "2.5"^^xsd:float ;
+             :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Medium_size_animal
+:Medium_size_animal rdf:type owl:NamedIndividual ,
+                             :Animal .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Medium_wind
+:Medium_wind rdf:type owl:NamedIndividual ,
+                      :Wind_speed_range ;
+             :maxSpeedValue "17.1"^^xsd:float ;
+             :minSpeedValue "5.5"^^xsd:float ;
+             :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Mini
+:Mini rdf:type owl:NamedIndividual ,
+               :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Mobile_work_zone
+:Mobile_work_zone rdf:type owl:NamedIndividual ,
+                           :Dynamic_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moderate_breeze
+:Moderate_breeze rdf:type owl:NamedIndividual ,
+                          :Wind_speed_range ;
+                 :maxSpeedValue "7.9"^^xsd:float ;
+                 :minSpeedValue "5.5"^^xsd:float ;
+                 :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moderate_rain
+:Moderate_rain rdf:type owl:NamedIndividual ,
+                        :Rainfall_intensity_range ;
+               :maxIntensityValue "7.6"^^xsd:float ;
+               :minIntensityValue "2.5"^^xsd:float ;
+               :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moderate_snow
+:Moderate_snow rdf:type owl:NamedIndividual ,
+                        :Snowfall_visibility_range ;
+               :maxVisibilityValue "1.0"^^xsd:float ;
+               :minVisibilityValue "0.5"^^xsd:float ;
+               :unit "km" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Motor_vehicle
+:Motor_vehicle rdf:type owl:NamedIndividual ,
+                        :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Motorcycle
+:Motorcycle rdf:type owl:NamedIndividual ,
+                     :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Motorists_on_the_roadside
+:Motorists_on_the_roadside rdf:type owl:NamedIndividual ,
+                                    :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Movable_signs
+:Movable_signs rdf:type owl:NamedIndividual ,
+                        :Sign_feature .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moving_obstacle
+:Moving_obstacle rdf:type owl:NamedIndividual ,
+                          :Inanimate_obstacle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Multiple
+:Multiple rdf:type owl:NamedIndividual ,
+                   :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#NavIC
+:NavIC rdf:type owl:NamedIndividual ,
+                :Satellite_local_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Near_gale
+:Near_gale rdf:type owl:NamedIndividual ,
+                    :Wind_speed_range ;
+           :maxSpeedValue "17.1"^^xsd:float ;
+           :minSpeedValue "13.9"^^xsd:float ;
+           :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Next_to_adjacent_lane
+:Next_to_adjacent_lane rdf:type owl:NamedIndividual ,
+                                :Left_of_subject ,
+                                :Right_of_subject .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Night_time
+:Night_time rdf:type owl:NamedIndividual ,
+                     :Illumination_intensity_range ;
+            :maxIlluminationIntensityValue "1.0"^^xsd:float ;
+            :unit "lux" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#No_lane_marking
+:No_lane_marking rdf:type owl:NamedIndividual ,
+                          :Lane_marking .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#No_rain
+:No_rain rdf:type owl:NamedIndividual ,
+                  :Rainfall_intensity_scalar ;
+         :intensityValue "0.0"^^xsd:float ;
+         :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#No_snow
+:No_snow rdf:type owl:NamedIndividual ,
+                  :Snowfall_visibility_scalar ;
+         :unit "km" ;
+         :visibilityValue "inf"^^xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#No_wind
+:No_wind rdf:type owl:NamedIndividual ,
+                  :Wind_speed_scalar ;
+         :speedValue "0.0"^^xsd:float ;
+         :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Nominal
+:Nominal rdf:type owl:NamedIndividual ,
+                  :Scenario_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-motor_vehicle
+:Non-motor_vehicle rdf:type owl:NamedIndividual ,
+                            :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-precipitating_water__droplets
+:Non-precipitating_water__droplets rdf:type owl:NamedIndividual ,
+                                            :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-signalised_intersection
+:Non-signalised_intersection rdf:type owl:NamedIndividual ,
+                                      :Intersection_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-signalised_roundabout
+:Non-signalised_roundabout rdf:type owl:NamedIndividual ,
+                                    :Roundabout_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-signalised_without_yielding_roundabout
+:Non-signalised_without_yielding_roundabout rdf:type owl:NamedIndividual ,
+                                                     :Roundabout_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Non-signalised_yielding_roundabout
+:Non-signalised_yielding_roundabout rdf:type owl:NamedIndividual ,
+                                             :Roundabout_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Normal
+:Normal rdf:type owl:NamedIndividual ,
+                 :Roundabout .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Oncoming
+:Oncoming rdf:type owl:NamedIndividual ,
+                   :Direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Oncoming_vehicle_lights
+:Oncoming_vehicle_lights rdf:type owl:NamedIndividual ,
+                                  :Artificial_illumination .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Orographic_rain
+:Orographic_rain rdf:type owl:NamedIndividual ,
+                          :Rainfall_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Other
+:Other rdf:type owl:NamedIndividual ,
+                :Quality .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Overcast
+:Overcast rdf:type owl:NamedIndividual ,
+                   :Cloudiness_scalar ;
+          :cloudinessValue "8"^^xsd:unsignedShort ;
+          :unit "oktas" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Overhead_wires
+:Overhead_wires rdf:type owl:NamedIndividual ,
+                         :Interference_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Parking_lot
+:Parking_lot rdf:type owl:NamedIndividual ,
+                      :Fixed_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Partially_blocked_from_view
+:Partially_blocked_from_view rdf:type owl:NamedIndividual ,
+                                      :Visibility .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Partly_cloudy
+:Partly_cloudy rdf:type owl:NamedIndividual ,
+                        :Cloudiness_range ;
+               :maxCloudinessValue "7"^^xsd:unsignedShort ;
+               :minCloudinessValue "1"^^xsd:unsignedShort ;
+               :unit "oktas" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Passenger_car
+:Passenger_car rdf:type owl:NamedIndividual ,
+                        :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Passive_safety
+:Passive_safety rdf:type owl:NamedIndividual ,
+                         :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Paved_or_gravel
+:Paved_or_gravel rdf:type owl:NamedIndividual ,
+                          :Shoulder .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Pavement
+:Pavement rdf:type owl:NamedIndividual ,
+                   :Transverse_plane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Pavers
+:Pavers rdf:type owl:NamedIndividual ,
+                 :Drivable_area_surface_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Pedestrian_crossing
+:Pedestrian_crossing rdf:type owl:NamedIndividual ,
+                              :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Person_directing_traffic
+:Person_directing_traffic rdf:type owl:NamedIndividual ,
+                                   :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Person_in_wheelchair
+:Person_in_wheelchair rdf:type owl:NamedIndividual ,
+                               :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Person_pushing_stroller
+:Person_pushing_stroller rdf:type owl:NamedIndividual ,
+                                  :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Person_with_disabilities
+:Person_with_disabilities rdf:type owl:NamedIndividual ,
+                                   :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Police_officer
+:Police_officer rdf:type owl:NamedIndividual ,
+                         :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Police_siren
+:Police_siren rdf:type owl:NamedIndividual ,
+                       :Sound .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Police_vehicle
+:Police_vehicle rdf:type owl:NamedIndividual ,
+                         :Special_vehicle_type ,
+                         :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Police_whistle
+:Police_whistle rdf:type owl:NamedIndividual ,
+                         :Sound .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Post-crash_behaviour_and_risk_minimal_state
+:Post-crash_behaviour_and_risk_minimal_state rdf:type owl:NamedIndividual ,
+                                                      :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Potholes
+:Potholes rdf:type owl:NamedIndividual ,
+                   :Drivable_area_surface_features .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Powered_three-wheeler
+:Powered_three-wheeler rdf:type owl:NamedIndividual ,
+                                :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Proprietary
+:Proprietary rdf:type owl:NamedIndividual ,
+                      :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Proving_ground_test
+:Proving_ground_test rdf:type owl:NamedIndividual ,
+                              :Intended_execution_platform .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Public_road_test
+:Public_road_test rdf:type owl:NamedIndividual ,
+                           :Intended_execution_platform .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Quadricycle
+:Quadricycle rdf:type owl:NamedIndividual ,
+                      :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#RTK
+:RTK rdf:type owl:NamedIndividual ,
+              :Satellite_based_global_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rail_crossing
+:Rail_crossing rdf:type owl:NamedIndividual ,
+                        :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rails
+:Rails rdf:type owl:NamedIndividual .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Recreational_vehicle
+:Recreational_vehicle rdf:type owl:NamedIndividual ,
+                               :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Refuse_collection
+:Refuse_collection rdf:type owl:NamedIndividual ,
+                            :Temporary_drivable_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Regulatory_signs
+:Regulatory_signs rdf:type owl:NamedIndividual ,
+                           :Sign_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Reliability
+:Reliability rdf:type owl:NamedIndividual ,
+                      :Quality .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Rescue_vehicle
+:Rescue_vehicle rdf:type owl:NamedIndividual ,
+                         :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Reverse_driving_light
+:Reverse_driving_light rdf:type owl:NamedIndividual ,
+                                :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Right
+:Right rdf:type owl:NamedIndividual ,
+                :Changing__lane ,
+                :Swerving ,
+                :Turning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Right_hand_travel
+:Right_hand_travel rdf:type owl:NamedIndividual ,
+                            :Direction_of_travel .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Right_signal_light
+:Right_signal_light rdf:type owl:NamedIndividual ,
+                             :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Right_u-turn
+:Right_u-turn rdf:type owl:NamedIndividual ,
+                       :Turning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Road-works_crew
+:Road-works_crew rdf:type owl:NamedIndividual ,
+                          :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Road_sprinkler
+:Road_sprinkler rdf:type owl:NamedIndividual ,
+                         :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Road_work
+:Road_work rdf:type owl:NamedIndividual ,
+                    :Temporary_drivable_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Ruts
+:Ruts rdf:type owl:NamedIndividual ,
+               :Drivable_area_surface_features .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#SOTIF
+:SOTIF rdf:type owl:NamedIndividual ,
+                :Safety .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Same_lane
+:Same_lane rdf:type owl:NamedIndividual ,
+                    :Lateral_position .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sand
+:Sand rdf:type owl:NamedIndividual ,
+               :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Satellite
+:Satellite rdf:type owl:NamedIndividual ,
+                    :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#School_bus
+:School_bus rdf:type owl:NamedIndividual ,
+                     :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#School_zone
+:School_zone rdf:type owl:NamedIndividual ,
+                      :Fixed_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Self-balancing_scooter
+:Self-balancing_scooter rdf:type owl:NamedIndividual ,
+                                 :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Shared_lane
+:Shared_lane rdf:type owl:NamedIndividual ,
+                      :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Sidelink_PC5
+:Sidelink_PC5 rdf:type owl:NamedIndividual ,
+                       :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signage
+:Signage rdf:type owl:NamedIndividual ,
+                  :Temporary_drivable_structures .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signalised_intersection
+:Signalised_intersection rdf:type owl:NamedIndividual ,
+                                  :Intersection_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Signalised_roundabout
+:Signalised_roundabout rdf:type owl:NamedIndividual ,
+                                :Roundabout_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Similar_to_subject
+:Similar_to_subject rdf:type owl:NamedIndividual ,
+                             :Direction ,
+                             :Relative_speed .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Site_specific
+:Site_specific rdf:type owl:NamedIndividual ,
+                        :RTK_correction_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Skater
+:Skater rdf:type owl:NamedIndividual ,
+                 :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Slower
+:Slower rdf:type owl:NamedIndividual ,
+                 :Relative_speed .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Small_size_animal
+:Small_size_animal rdf:type owl:NamedIndividual ,
+                            :Animal .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Smoke_and_pollution
+:Smoke_and_pollution rdf:type owl:NamedIndividual ,
+                              :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Snow_on_surface
+:Snow_on_surface rdf:type owl:NamedIndividual ,
+                          :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_convoy
+:Special_convoy rdf:type owl:NamedIndividual ,
+                         :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Special_purpose_lane
+:Special_purpose_lane rdf:type owl:NamedIndividual ,
+                               :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Standing_still
+:Standing_still rdf:type owl:NamedIndividual ,
+                         :Longitudinal_action ;
+                :speedValue "0.0"^^xsd:float ;
+                :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Standing_water
+:Standing_water rdf:type owl:NamedIndividual ,
+                         :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Stationary_vehicle
+:Stationary_vehicle rdf:type owl:NamedIndividual ,
+                             :Inanimate_obstacle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Storm
+:Storm rdf:type owl:NamedIndividual ,
+                :Wind_speed_range ;
+       :maxSpeedValue "28.4"^^xsd:float ;
+       :minSpeedValue "24.5"^^xsd:float ;
+       :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Street_sweeper
+:Street_sweeper rdf:type owl:NamedIndividual ,
+                         :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Streetlights
+:Streetlights rdf:type owl:NamedIndividual ,
+                       :Artificial_illumination .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Strong_breeze
+:Strong_breeze rdf:type owl:NamedIndividual ,
+                        :Wind_speed_range ;
+               :maxSpeedValue "13.8"^^xsd:float ;
+               :minSpeedValue "10.8"^^xsd:float ;
+               :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Strong_gale
+:Strong_gale rdf:type owl:NamedIndividual ,
+                      :Wind_speed_range ;
+             :maxSpeedValue "24.4"^^xsd:float ;
+             :minSpeedValue "20.8"^^xsd:float ;
+             :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Surface_contamination
+:Surface_contamination rdf:type owl:NamedIndividual ,
+                                :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Swells
+:Swells rdf:type owl:NamedIndividual ,
+                 :Drivable_area_surface_features .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Tail_wind
+:Tail_wind rdf:type owl:NamedIndividual ,
+                    :Wind_direction .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Tailight
+:Tailight rdf:type owl:NamedIndividual ,
+                   :Light .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Temporary_lane_marking
+:Temporary_lane_marking rdf:type owl:NamedIndividual ,
+                                 :Lane_marking .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Toll_plaza
+:Toll_plaza rdf:type owl:NamedIndividual ,
+                     :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Traffic_lane
+:Traffic_lane rdf:type owl:NamedIndividual ,
+                       :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Traffic_management
+:Traffic_management rdf:type owl:NamedIndividual ,
+                             :Communication_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Traffic_management_vehicle
+:Traffic_management_vehicle rdf:type owl:NamedIndividual ,
+                                     :Special_vehicle_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Traffic_management_zone
+:Traffic_management_zone rdf:type owl:NamedIndividual ,
+                                  :Dynamic_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Training_car
+:Training_car rdf:type owl:NamedIndividual ,
+                       :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Tram
+:Tram rdf:type owl:NamedIndividual ,
+               :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Tram_lane
+:Tram_lane rdf:type owl:NamedIndividual ,
+                    :Lane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Truck
+:Truck rdf:type owl:NamedIndividual ,
+                :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Tunnel
+:Tunnel rdf:type owl:NamedIndividual ,
+                 :Special_structures_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Undivided
+:Undivided rdf:type owl:NamedIndividual ,
+                    :Transverse_plane_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Unknown
+:Unknown rdf:type owl:NamedIndividual ,
+                  :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Up-slope
+:Up-slope rdf:type owl:NamedIndividual ,
+                   :Longitudinal_plane ;
+          :minGradientValue "0.0"^^xsd:float .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Urban_canyon
+:Urban_canyon rdf:type owl:NamedIndividual ,
+                       :Interference_zone .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#V2X
+:V2X rdf:type owl:NamedIndividual ,
+              :Communication_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vehicle_towing_combination_trailers
+:Vehicle_towing_combination_trailers rdf:type owl:NamedIndividual ,
+                                              :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vehicle_towing_trailers
+:Vehicle_towing_trailers rdf:type owl:NamedIndividual ,
+                                  :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vehicle_transporting_protruding_cargo
+:Vehicle_transporting_protruding_cargo rdf:type owl:NamedIndividual ,
+                                                :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Violent_rain
+:Violent_rain rdf:type owl:NamedIndividual ,
+                       :Rainfall_intensity_range ;
+              :maxIntensityValue "100.0"^^xsd:float ;
+              :minIntensityValue "50.0"^^xsd:float ;
+              :unit "mm/h" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Violent_storm
+:Violent_storm rdf:type owl:NamedIndividual ,
+                        :Wind_speed_range ;
+               :maxSpeedValue "32.6"^^xsd:float ;
+               :minSpeedValue "28.5"^^xsd:float ;
+               :unit "m/s" .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Virtual_test_platform
+:Virtual_test_platform rdf:type owl:NamedIndividual ,
+                                :Intended_execution_platform .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Visually-impaired_pedestrian
+:Visually-impaired_pedestrian rdf:type owl:NamedIndividual ,
+                                       :Pedestrian .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Volcanic_ash
+:Volcanic_ash rdf:type owl:NamedIndividual ,
+                       :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Vulnerable_road_user
+:Vulnerable_road_user rdf:type owl:NamedIndividual ,
+                               :Traffic_agent_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#WLAN
+:WLAN rdf:type owl:NamedIndividual ,
+               :Communication_technology .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Warning_signs
+:Warning_signs rdf:type owl:NamedIndividual ,
+                        :Sign_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Water_spray
+:Water_spray rdf:type owl:NamedIndividual ,
+                      :Particulates_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Wet
+:Wet rdf:type owl:NamedIndividual ,
+              :Drivable_area_induced_surface_condition .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Work_vehicle
+:Work_vehicle rdf:type owl:NamedIndividual ,
+                       :Special_vehicle_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#XiL
+:XiL rdf:type owl:NamedIndividual ,
+              :Intended_execution_platform .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Automated_or_connected_vehicle_(V2V)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Automated_or_connected_vehicle_(V2V)> rdf:type owl:NamedIndividual ,
+                                                                                                            :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Disabled_vehicle_(broken-down)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Disabled_vehicle_(broken-down)> rdf:type owl:NamedIndividual ,
+                                                                                                      :Vehicle .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Field_Operational_Test_(FOT)_data
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Field_Operational_Test_(FOT)_data> rdf:type owl:NamedIndividual ,
+                                                                                                         :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#GLObal_NAvigation_Satellite_System_(GLONASS)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#GLObal_NAvigation_Satellite_System_(GLONASS)> rdf:type owl:NamedIndividual ,
+                                                                                                                    :Satellite_based_global_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Global_Positioning_System_(GPS)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Global_Positioning_System_(GPS)> rdf:type owl:NamedIndividual ,
+                                                                                                       :Satellite_based_global_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Global_specific_(NovAtel_satellite)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Global_specific_(NovAtel_satellite)> rdf:type owl:NamedIndividual ,
+                                                                                                           :RTK_correction_type .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indian_Regional_Navigation_Satellite_System_(IRNSS)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Indian_Regional_Navigation_Satellite_System_(IRNSS)> rdf:type owl:NamedIndividual ,
+                                                                                                                           :Satellite_local_positioning .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Laws,_regulations,_and_standards
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Laws,_regulations,_and_standards> rdf:type owl:NamedIndividual ,
+                                                                                                        :Scenario_source .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moped/scooter
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Moped/scooter> rdf:type owl:NamedIndividual ,
+                                                                                     :Cyclist .
+
+
+###  https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Quasi-Zenith_Satellite_System_(QZSS)
+<https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#Quasi-Zenith_Satellite_System_(QZSS)> rdf:type owl:NamedIndividual ,
+                                                                                                            :Satellite_local_positioning .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Abstraction_level
+                :Indicator
+                :Intended_execution_platform
+                :Scenario_source
+                :Scenario_type
+                :Scenario_usage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Average_duration
+                :Encounter_rate_per_hour
+                :Encounter_rate_per_km
+                :Exposure_probability
+                :Frequency_in_SCDB
+                :Frequency_per_driven_hour
+                :Frequency_per_driven_km
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Basic_road_structures
+                :Drivable_area
+                :Junctions
+                :Special_structures
+                :Temporary_drivable_structures
+                :Zones
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Building
+                :Street_furniture
+                :Streetlight
+                :Vegetation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Comfort
+                :Efficiency
+                :Safety
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Communication
+                :Positioning
+                :RTK_correction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Communication_technology
+                :Communication_type
+                :Direction_of_travel
+                :Downlink
+                :Drivable_area_edge
+                :Drivable_area_geometry
+                :Drivable_area_induced_surface_condition
+                :Drivable_area_lane_specification
+                :Drivable_area_signs
+                :Drivable_area_surface
+                :Drivable_area_surface_features
+                :Drivable_area_surface_type
+                :Drivable_area_type
+                :Lane_dimensions
+                :Lane_marking
+                :Lane_type
+                :Lane_usage
+                :Particulates_type
+                :RTK_correction_type
+                :Rainfall_type
+                :Sign_feature
+                :Sign_type
+                :Transverse_plane_type
+                :Uplink
+                :Wind_direction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Communication_technology
+                :Communication_type
+                :Direction_of_travel
+                :Downlink
+                :Drivable_area_edge
+                :Drivable_area_geometry
+                :Drivable_area_lane_specification
+                :Drivable_area_signs
+                :Drivable_area_surface
+                :Drivable_area_type
+                :Lane_marking
+                :Lane_type
+                :Lane_usage
+                :Particulates_type
+                :RTK_correction_type
+                :Rainfall_type
+                :Transverse_plane_type
+                :Uplink
+                :Wind_direction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Communication_technology
+                :Communication_type
+                :Downlink
+                :Drivable_area_edge
+                :Drivable_area_geometry
+                :Drivable_area_lane_specification
+                :Drivable_area_signs
+                :Drivable_area_surface
+                :Drivable_area_type
+                :Particulates_type
+                :RTK_correction_type
+                :Rainfall_type
+                :Transverse_plane_type
+                :Uplink
+                :Wind_direction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Communication_technology
+                :Communication_type
+                :Downlink
+                :Drivable_area_edge
+                :Drivable_area_geometry
+                :Drivable_area_lane_specification
+                :Drivable_area_signs
+                :Drivable_area_surface
+                :Drivable_area_type
+                :Particulates_type
+                :RTK_correction_type
+                :Rainfall_type
+                :Uplink
+                :Wind_direction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Correctness_of_functionality
+                :Quality
+                :Safety
+                :Virtual_test_platform_verification
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cross_road
+                :Grade_separated
+                :Staggered
+                :T-junction
+                :Y-junction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Distributopr_roads
+                :Minor_or_local_roads
+                :Motorways_or_highways_or_interstates
+                :Parking_space
+                :Primary_roads
+                :Radial_roads
+                :Shared_space
+                :Slip_roads_or_off-ramps
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Dynamic_zone
+                :Fixed_zone
+                :Freight_distribution_centre
+                :Geo-fenced_areas
+                :Interference_zone
+                :Port_zone
+                :Regions_or_states
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Horizontal_plane
+                :Longitudinal_plane
+                :Transverse_plane
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Lateral_action
+                :Longitudinal_action
+                :Mixed_action
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Line_markers
+                :Shoulder
+                :Snowbanks
+                :Solid_barriers
+                :Temporary_line_markers
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasCommunicationTechnology
+                :hasCommunicationType
+                :hasDownlink
+                :hasRTKCorrectionType
+                :hasRainfallType
+                :hasUplink
+                :hasWindDirection
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasIlluminationIntensity
+                :hasLatency
+                :hasParticulatesIntensity
+                :hasParticulatesSize
+                :hasRainfallIntensity
+                :hasSnowfallVisibility
+                :hasTemperature
+                :hasThroughput
+                :hasWindSpeed
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasLatency
+                :hasParticulatesIntensity
+                :hasParticulatesSize
+                :hasRainfallIntensity
+                :hasSnowfallVisibility
+                :hasTemperature
+                :hasThroughput
+                :hasWindSpeed
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :hasLatency
+                :hasRainfallIntensity
+                :hasSnowfallVisibility
+                :hasTemperature
+                :hasThroughput
+                :hasWindSpeed
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :Illumination_intensity
+                :Intensity
+                :Latency
+                :Particulates_intensity
+                :Particulates_size
+                :Snowfall_visibility
+                :Speed
+                :Temperature
+                :Throughput
+                :unit
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :Intensity
+                :Latency
+                :Particulates_intensity
+                :Particulates_size
+                :Snowfall_visibility
+                :Speed
+                :Temperature
+                :Throughput
+                :unit
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :Intensity
+                :Latency
+                :Snowfall_visibility
+                :Speed
+                :Temperature
+                :Throughput
+                :unit
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :illuminationIntensityValue
+                :maxIlluminationIntensityValue
+                :minIlluminationIntensityValue
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :latencyValue
+                :maxLatencyValue
+                :minLatencyValue
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :maxParticulatesIntensityValue
+                :minParticulatesIntensityValue
+                :particulatesIntensityValue
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :maxParticulatesSizeValue
+                :minParticulatesSizeValue
+                :particulatesSizeValue
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :maxThroughputValue
+                :minThroughputValue
+                :throughputValue
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
