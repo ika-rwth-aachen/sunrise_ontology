@@ -25,7 +25,7 @@ An ontology defining Operational Design Domain (ODD) and scenario-related concep
 > The project is open-sourced and maintained by the [**Institute for Automotive Engineering (ika) at RWTH Aachen University**](https://www.ika.rwth-aachen.de/).
 > We cover a wide variety of research topics within our [*Vehicle Intelligence & Automated Driving*](https://www.ika.rwth-aachen.de/en/competences/fields-of-research/vehicle-intelligence-automated-driving.html) domain.
 > If you would like to learn more about how we can support your automated driving or robotics efforts, feel free to reach out to us!
-> :email: ***opensource@ika.rwth-aachen.de***
+> email ***opensource@ika.rwth-aachen.de***
 
 ## Overview
 The SUNRISE Ontology formalizes key concepts and relationships related to ODDs and scenarios within the SUNRISE project. It is aligned with the taxonomies defined in ISO 34503 and ISO 34504, ensuring compatibility with international standards for scenario-based testing and verification.
