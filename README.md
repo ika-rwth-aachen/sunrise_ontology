@@ -2,6 +2,8 @@
 
 An ontology defining Operational Design Domain (ODD) and scenario-related concepts within the SUNRISE project, published via GitHub Pages.
 
+🌐 **Webpage:** [https://ika-rwth-aachen.github.io/sunrise_ontology/](https://ika-rwth-aachen.github.io/sunrise_ontology/)
+
 **Ontology IRI:** `https://ika-rwth-aachen.github.io/sunrise_ontology/ontology`  
 **Namespace:** `https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#`  
 **Latest Version IRI:** `https://ika-rwth-aachen.github.io/sunrise_ontology/ontology/1.0`
@@ -84,15 +86,19 @@ If you use this ontology, please cite the following project deliverable:
 ## Project structure
 ```
 docs/
-├─ ontology.ttl         # Latest Turtle
-├─ ontology.rdf         # Latest RDF/XML
-├─ ontology.jsonld      # Latest JSON-LD
-├─ index.html           # Human-readable landing page
-└─ versions/
-   └─ 1.0/
-      ├─ ontology.ttl
-      ├─ ontology.rdf
-      └─ ontology.jsonld
+├─ index.html               # Human-readable landing page (GitHub Pages)
+├─ media/                   # Logos and images
+├─ citation.bib             # BibTeX reference for citation
+└─ ontology/                # Ontology root
+   ├─ ontology.ttl          # Latest Turtle
+   ├─ ontology.rdf          # Latest RDF/XML
+   ├─ ontology.jsonld       # Latest JSON-LD
+   ├─ index.html            # Redirect for the Ontology IRI
+   └─ versions/
+      └─ 1.0/
+         ├─ ontology.ttl
+         ├─ ontology.rdf
+         └─ ontology.jsonld
 ```
 
 ---
