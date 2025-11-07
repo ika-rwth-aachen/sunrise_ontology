@@ -1,59 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SUNRISE Ontology</title>
-<meta name="description" content="SUNRISE Ontology published by RWTH Aachen University, ika." />
-<style>
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif; max-width: 920px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-header { margin-bottom: 1.5rem; }
-h1 { margin: 0 0 .25rem 0; }
-code { background: #f5f5f7; padding: 2px 6px; border-radius: 4px; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-.muted { color: #555; }
-footer { margin-top: 3rem; font-size: 0.95rem; color: #555; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SUNRISE Ontology</title>
+  <meta name="description" content="An ontology defining ODD and scenario-related concepts within the SUNRISE project, aligned with ISO 34503 and ISO 34504." />
 
+  <!-- Simple, clean styling -->
+  <style>
+    :root { --fg:#0f172a; --muted:#475569; --line:#e5e7eb; --bg:#ffffff; --card:#fafafa; }
+    html,body { background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif; }
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    header { text-align: center; margin-bottom: 1.5rem; }
+    header img { display: block; margin: 0.5rem auto; }
+    h1 { margin: .5rem 0 0.75rem; font-size: 2rem; }
+    h2 { margin-top: 2rem; }
+    p, li { line-height: 1.6; }
+    code, pre { background: #f6f7f9; border: 1px solid var(--line); border-radius: 6px; }
+    code { padding: 2px 6px; }
+    pre { padding: .75rem 1rem; overflow-x: auto; }
+    .muted { color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; }
+    .toc { border: 1px solid var(--line); border-radius: 12px; padding: 1rem; background: #fbfbfc; }
+    .note { border-left: 4px solid #2563eb; background: #eef2ff; padding: .75rem 1rem; border-radius: 6px; }
+    footer { margin: 3rem 0 2rem; text-align: center; font-size: .95rem; color: var(--muted); }
+    hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+    a { color: #0b63c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; margin-top: 1rem; }
+    .kpi { padding: .75rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+  </style>
 
-<!-- JSON-LD metadata for discoverability -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org/",
-"@type": "Dataset",
-"name": "SUNRISE Ontology",
-"description": "An ontology defining core concepts in the SUNRISE domain.",
-"license": "https://creativecommons.org/licenses/by/4.0/",
-"creator": {
-"@type": "Organization",
-"name": "RWTH Aachen University, ika"
-},
-"url": "https://ika-rwth-aachen.github.io/sunrise_ontology/",
-"distribution": [
-{"@type": "DataDownload", "encodingFormat": "text/turtle", "contentUrl": "./ontology.ttl"},
-{"@type": "DataDownload", "encodingFormat": "application/rdf+xml", "contentUrl": "./ontology.rdf"},
-{"@type": "DataDownload", "encodingFormat": "application/ld+json", "contentUrl": "./ontology.jsonld"}
-]
-}
-</script>
+  <!-- JSON-LD metadata (helps discoverability, e.g., Google Dataset Search) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Dataset",
+    "name": "SUNRISE Ontology",
+    "description": "Ontology for Operational Design Domains (ODDs) and scenario-related concepts within the SUNRISE project, aligned with ISO 34503 and ISO 34504.",
+    "url": "https://ika-rwth-aachen.github.io/sunrise_ontology/",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "creator": {
+      "@type": "Organization",
+      "name": "RWTH Aachen University, Institute for Automotive Engineering (ika)",
+      "url": "https://www.ika.rwth-aachen.de/"
+    },
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "text/turtle", "contentUrl": "./ontology.ttl" },
+      { "@type": "DataDownload", "encodingFormat": "application/rdf+xml", "contentUrl": "./ontology.rdf" },
+      { "@type": "DataDownload", "encodingFormat": "application/ld+json", "contentUrl": "./ontology.jsonld" }
+    ],
+    "keywords": ["ontology","ODD","scenario","ISO 34503","ISO 34504","automated driving","SUNRISE"]
+  }
+  </script>
 </head>
 <body>
-<header>
-<h1>SUNRISE Ontology</h1>
-<p class="muted">RWTH Aachen University, ika</p>
-</header>
+  <main>
+    <header>
+      <!-- Place your images at docs/media/... -->
+      <img src="./media/sunrise_logo.jpg" alt="SUNRISE Project Logo" width="320" />
+      <h1>SUNRISE Ontology</h1>
+      <p class="muted">An ontology defining ODD and scenario-related concepts within the SUNRISE project, published via GitHub Pages.</p>
+      <img src="./media/eu_logo.png" alt="European Union Emblem" width="180" />
+      <p class="muted" style="max-width: 720px; margin: .5rem auto 0;">
+        Funded by the European Union under Grant Agreement No. 101069573.<br>
+        Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or CINEA.
+      </p>
+    </header>
+
+    <section class="toc" id="table-of-contents">
+      <strong>Table of Contents</strong>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#how-to-use">How to use</a></li>
+        <li><a href="#serializations">Serializations</a></li>
+        <li><a href="#versioning">Versioning</a></li>
+        <li><a href="#citing">Citing</a></li>
+        <li><a href="#project-structure">Project structure</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#acknowledgements">Acknowledgements</a></li>
+      </ul>
+    </section>
+
+    <section class="note" aria-label="Important">
+      <p>
+        The project is open-sourced and maintained by the
+        <a href="https://www.ika.rwth-aachen.de/" target="_blank" rel="noopener">Institute for Automotive Engineering (ika) at RWTH Aachen University</a>.
+        We cover a wide variety of research topics within our
+        <a href="https://www.ika.rwth-aachen.de/en/competences/fields-of-research/vehicle-intelligence-automated-driving.html" target="_blank" rel="noopener"><em>Vehicle Intelligence &amp; Automated Driving</em></a> domain.
+        For collaboration inquiries: <a href="mailto:opensource@ika.rwth-aachen.de"><code>opensource@ika.rwth-aachen.de</code></a>.
+      </p>
+    </section>
+
+    <h2 id="overview">Overview</h2>
+    <p>
+      The SUNRISE Ontology formalizes key concepts and relationships related to
+      <strong>Operational Design Domains (ODDs)</strong> and <strong>scenarios</strong> within the SUNRISE project.
+      It is aligned with the taxonomies defined in <strong>ISO&nbsp;34503</strong> and <strong>ISO&nbsp;34504</strong>, ensuring compatibility with
+      international standards for scenario-based testing and verification.
+    </p>
+    <p>
+      The ontology models <strong>dynamic entities</strong>, <strong>environmental conditions</strong>, and <strong>scenery elements</strong>,
+      together with their attributes. It also captures <strong>exposure metrics</strong> and <strong>scenario metadata</strong>, providing a structured foundation
+      for representing and exchanging information in simulation and testing contexts.
+    </p>
+
+    <div class="kpis" aria-label="Ontology identifiers">
+      <div class="kpi"><strong>Ontology IRI</strong><br><code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology</code></div>
+      <div class="kpi"><strong>Namespace</strong><br><code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#</code></div>
+      <div class="kpi"><strong>Latest Version IRI</strong><br><code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology/1.0</code></div>
+    </div>
+
+    <h2 id="how-to-use">How to use</h2>
+    <h3>Import in Protégé (or any OWL/RDF tool)</h3>
+    <ul>
+      <li><strong>Via IRI:</strong> <code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology</code></li>
+      <li><strong>Or download</strong> a file below and open locally.</li>
+    </ul>
+
+    <h3>Programmatic use (Python / rdflib)</h3>
+    <pre><code>from rdflib import Graph
+G = Graph().parse("https://ika-rwth-aachen.github.io/sunrise_ontology/ontology.ttl", format="turtle")</code></pre>
+
+	<h2 id="serializations">Serializations</h2>
+	<div class="cards">
+	  <div class="card">
+		<h3>Turtle (.ttl)</h3>
+		<p>Human-friendly serialization.</p>
+		<p><a href="./ontology.ttl" download="ontology.ttl">Download ontology.ttl</a></p>
+	  </div>
+
+	  <div class="card">
+		<h3>RDF/XML (.rdf)</h3>
+		<p>Standard OWL/RDF exchange format.</p>
+		<p><a href="./ontology.rdf" download="ontology.rdf">Download ontology.rdf</a></p>
+	  </div>
+
+	  <div class="card">
+		<h3>JSON-LD (.jsonld)</h3>
+		<p>Web &amp; API-friendly serialization.</p>
+		<p><a href="./ontology.jsonld" download="ontology.jsonld">Download ontology.jsonld</a></p>
+	  </div>
+	</div>
+
+	<p class="muted">
+	  <em>Note:</em> GitHub Pages does not perform HTTP content negotiation.
+	  Separate files are provided per format.
+	</p>
 
 
-<section>
-<p><strong>Ontology IRI:</strong> <code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology</code></p>
-<p><strong>Namespace:</strong> <code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology#</code></p>
-<p><strong>Latest Version IRI:</strong> <code>https://ika-rwth-aachen.github.io/sunrise_ontology/ontology/1.0</code></p>
-</section>
+    <h2 id="citing">Citing</h2>
+    <p>If you use this ontology, please cite the following project deliverable:</p>
+    <blockquote>
+      Beckmann, J., Zhang, X., de Gelder, E., van Hassel, E., Nieto, M., Ben Nejma, G., &amp; Grabowski, M. (2025).<br>
+      <strong>D5.2 – Harmonised descriptions for content of CCAM safety assessment data framework.</strong><br>
+      <em>SUNRISE – Safety assUraNce fRamework for connected, automated mobIlity SystEms.</em><br>
+      Horizon Europe Research and Innovation Action, Grant Agreement No. 101069573.
+    </blockquote>
 
+    <h2 id="project-structure">Project structure</h2>
+    <pre><code>docs/
+├─ ontology.ttl         # Latest Turtle
+├─ ontology.rdf         # Latest RDF/XML
+├─ ontology.jsonld      # Latest JSON-LD
+├─ index.html           # Human-readable landing page
+└─ versions/
+   └─ 1.0/
+      ├─ ontology.ttl
+      ├─ ontology.rdf
+      └─ ontology.jsonld</code></pre>
 
-<h2>Downloads</h2>
-<div class="cards">
-<div class="card">
-<h3>Turtle (.ttl)</h3>
+    <h2 id="license">License</h2>
+    <p>
+      This ontology is licensed under the
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+        Creative Commons Attribution 4.0 International (CC BY 4.0)
+      </a>
+      license.
+    </p>
+    <p>Developed within the <a href="https://ccam-sunrise-project.eu/" target="_blank" rel="noopener">SUNRISE Project</a>, funded by the European Union under grant agreement no. 101069573.</p>
+
+    <h2 id="contact">Contact</h2>
+    <p>
+      Maintainer: <a href="mailto:jobst.beckmann@ika.rwth-aachen.de">jobst.beckmann@ika.rwth-aachen.de</a><br>
+      GitHub: <a href="https://github.com/ika-rwth-aachen/sunrise_ontology" target="_blank" rel="noopener">ika-rwth-aachen/sunrise_ontology</a>
+    </p>
+
+    <h2 id="acknowledgements">Acknowledgements</h2>
+    <p>
+      This ontology is developed as part of the
+      <a href="https://ccam-sunrise-project.eu/" target="_blank" rel="noopener">SUNRISE project</a>.
+    </p>
+    <p>
+      <img src="./media/sunrise_logo.jpg" alt="SUNRISE Project Logo" width="360" />
+    </p>
+    <p class="muted" style="max-width: 720px;">
+      Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not
+      necessarily reflect those of the European Union or European Climate, Infrastructure and Environment Executive Agency (CINEA).
+      Neither the European Union nor the granting authority can be held responsible for them.
+    </p>
+    <p>
+      <img src="./media/eu_logo.png" alt="European Union Emblem" width="200" />
+    </p>
+
+    <footer>
+      Hosted on GitHub Pages • Last updated: 2025-10-16
+    </footer>
+  </main>
+</body>
 </html>
