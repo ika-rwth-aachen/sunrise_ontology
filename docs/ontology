@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=ontology.ttl" />
+  <!-- Redirect immediately to the RDF/XML serialization -->
+  <meta http-equiv="refresh" content="0; url=ontology.rdf" />
   <link rel="alternate" type="text/turtle" href="ontology.ttl" />
   <link rel="alternate" type="application/rdf+xml" href="ontology.rdf" />
   <link rel="alternate" type="application/ld+json" href="ontology.jsonld" />
@@ -14,6 +15,6 @@
     <li><a href="ontology.rdf">RDF/XML (.rdf)</a></li>
     <li><a href="ontology.jsonld">JSON-LD (.jsonld)</a></li>
   </ul>
-  <p>Redirecting to the Turtle serialization…</p>
+  <p>Redirecting to the RDF/XML serialization…</p>
 </body>
 </html>
