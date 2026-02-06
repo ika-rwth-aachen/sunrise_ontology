@@ -46,7 +46,7 @@ The ontology models dynamic entities, environmental conditions, and scenery elem
 ### Programmatic use (Python / rdflib)
 ```python
 from rdflib import Graph
-G = Graph().parse("https://ika-rwth-aachen.github.io/sunrise_ontology/ontology.ttl", format="turtle")
+G = Graph().parse("https://ika-rwth-aachen.github.io/sunrise_ontology/ontology/ontology.ttl", format="turtle")
 ```
 
 ---
